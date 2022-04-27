@@ -1,0 +1,22 @@
+﻿@model WebApplication6.Models.GuestResponse
+
+<head>
+    <meta name="viewport" content="wibth=device-wibth" />
+    <title>Thanks</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css"  />
+</head>
+<body class="text-center">
+    <p>
+        <h1>Спасибо @Model.Name !</h1>
+        @if (Model.WillAttend== true)
+        { 
+            @:Отлично!
+        }
+        else
+        {
+            @:Мне очень жаль, что вы не сможете.
+        }
+    </p>
+    <p>Нажми <a class="navbar-link" asp-action="ListResponses">сюда</a> чтобы увидеть, кто придет.</p>
+</body>
+
